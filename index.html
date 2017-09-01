@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>KaryaMuda</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=10">
+	<link rel="stylesheet" href="style.css">
+	<link href='logo.png' style="width: 32px;height: 32px;" rel='shortcut icon'>
+
+</head>
+
+<body>
+	<header>
+		<img src="img/logo horizontal.png" style="width: 200px; height: 70px;">
+	</header>
+	
+	<nav id="navigation-menu">
+		<ul>
+			<li><a href="#section-1">Beranda</a></li>
+			<li><a href="#section-2">Informasi</a></li>
+			<li><a href="#section-3">Tentang Kita</a></li>
+			<li><a href="#section-4">Masuk</a></li>
+			
+		</ul>
+	</nav>
+	
+	<div id="content">
+		<section id="section-1">			
+			<div class="content">
+
+				<h3>Bagikan ide dan karya jeniusmu !</h3>
+					<h3>Jadilah solusioner permasalahan daerah asalmu </h3>
+						<h3>di KaryaMuda</h3>	
+					<h3>Share To Solved</h3>
+					<img src="img/diskusi.png" style="	width: 700px;
+														height: 430px; margin-left: 570px; margin-top: -170px;">
+			<div id= "kotaku">
+				<a href="form_komunitas.html">Komunitas</a>
+			</div>
+			<div id= "kotaku2">
+				<a href="form_Mahasiswa.html">Mahasiswa</a>
+			</div>
+		</section>
+		<section id="section-2">
+			<div class="content">
+				<br>
+				<center><h1 style="font-size: 2em;color: #ffffff; ">Fokus Pada</h1></center>
+			
+				<div id="kotak1">
+				<a href="index.html"><img src="img/pendidikan.png" style=""></a>
+				</div>
+				<div id="kotak2">
+				<a href="index.html"><img src="img/sosial.png" style=""></a>
+				</div>
+				<div id="kotak3">
+				<a href="index.html"><img src="img/pariwisata.png" style=""></a>
+				</div>
+				</div>
+		</section>
+		<section id="section-3">
+			<div class="content">
+				
+				</div>
+		</section>
+		<section id="section-4">
+			<div class="content">
+				
+				<div id="bglogin"> 
+							<a href="komunitas_berita.html"><H3>MASUK</H3></a>
+						</div>
+					<div id="bglogin1">
+						<form target="" action=""> <!-- action biasanya digunain buat kode php yang jalanin login setauku sih -->
+					<div id="email">
+						<input type="text" name="username">
+					</div>
+					<div id="password">
+						<input type="password" name="password">
+					</div>
+
+					<div id="btnlogin">
+					<button type="button" >Masuk</button>
+					</div>
+					<div id="Lupa" style="margin-right: 60px; margin-top: -20px; color: #76b3b8;">
+					<a href=""><i><u>Lupa Password?</u></i></a>
+					</div>
+					<div id="daftar">
+					<a href="#popup">	Daftar</a>
+					</div>
+					<div id="popup">
+    					<div class="window">
+       					<a href="#" class="close-button" title="Close">X</a>
+        				<h1>Anda Akan Mendaftar sebagai ?</h1>
+        				<div id="link1"><a href="form_komunitas.html">Komunitas</a></div>	
+        				<div id="link2"><a href="form_Mahasiswa.html">Mahasiswa</a></div>	
+   				    	</div>
+					</div>
+					</form>
+					</div>
+					
+				</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<footer>
+		<p>Copyright &copy;  | LAN Team Gemastik 10 2017</p>
+	</footer>
+	
+	<!-- Google CDN jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Page Scroll plugin -->
+	<script src="jquery.PageScroll2id.js"></script>
+	
+	<script>
+		(function($){
+			$(window).load(function(){
+				$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+					highlightSelector:"#navigation-menu a"
+				});
+								
+				$("a[rel='next']").click(function(e){
+					e.preventDefault();
+					var to=$(this).parent().parent("section").next().attr("id");
+					$.mPageScroll2id("scrollTo",to);
+				});				
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>
